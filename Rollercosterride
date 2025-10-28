@@ -1,0 +1,31 @@
+height = int(input())
+age = int(input())
+
+if height < 120:
+    height_status = "Not Allowed"
+elif height <= 140:
+    height_status = "Must ride with Adult"
+else:
+    height_status = "Can ride alone"
+
+
+if age < 5:
+    age_status = "Not Allowed"
+elif age <= 12:
+    age_status = "Must ride with Adult"
+else:
+    age_status = "Can ride alone"
+
+if height_status == "Not Allowed" or age_status == "Not Allowed":
+    status = "Not Allowed"
+    price = 0
+elif height_status == "Must ride with Adult" or age_status == "Must ride with Adult":
+    status = "Must ride with Adult"
+    price = 200
+else:
+    status = "Can ride alone"
+    price = 300
+
+print(status)
+if status != "Not Allowed":
+    print(price)
